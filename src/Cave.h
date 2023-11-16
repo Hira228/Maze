@@ -7,11 +7,11 @@
 #include <random>
 #include <fstream>
 
-#define COUNT_OF_GENERATION     70
+#define COUNT_OF_GENERATION     100
 
-#define LOWER_LIMIT_OF_LIVE     4
+#define LOWER_LIMIT_OF_LIVE     3
 #define UPPER_LIMIT_OF_LIVE     8
-#define LOWER_LIMIT_OF_BORN     5
+#define LOWER_LIMIT_OF_BORN     4
 #define UPPER_LIMIT_OF_BORN     8
 
 namespace s21 {
@@ -19,34 +19,22 @@ using value_type = int;
 using cave_type = std::vector<std::vector<value_type>>;
 using limit_type = std::pair<value_type, value_type>;
 
-class CaveStruct {
-friend class Cave;
-public:
-CaveStruct() = default;
-CaveStruct(const std::size_t&, const std::size_t&);
-friend std::istream& operator>>(std::istream& is, CaveStruct& cave);
-int &operator()(std::size_t, std::size_t);
-int operator()(std::size_t, std::size_t) const;
-private:
-cave_type data;
-value_type width_;
-value_type height_;
-};
-
 class Cave {
+private:
+//cave_type cave_;
+cave_type temp_cave_;
+const value_type live_chance_;
+limit_type live_limit;
+limit_type born_limit;
+
 public:
+cave_type cave_;
 Cave(const std::size_t&, const std::size_t&, const value_type&);
 void InitializeRandomCave();
 void GenerateCave();
 value_type CountLiveNeighbours(const std::size_t&, const std::size_t);
 void print();
-
-private:
-CaveStruct cave_;
-CaveStruct temp_cave_;
-const value_type live_chance_;
-limit_type live_limit;
-limit_type born_limit;
+friend std::istream& operator>>(std::istream& is, Cave& cave);
 };
 } // namespace s21
 
