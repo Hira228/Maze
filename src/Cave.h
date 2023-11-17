@@ -9,9 +9,9 @@
 
 #define COUNT_OF_GENERATION     100
 
-#define LOWER_LIMIT_OF_LIVE     3
+#define LOWER_LIMIT_OF_LIVE     4
 #define UPPER_LIMIT_OF_LIVE     8
-#define LOWER_LIMIT_OF_BORN     4
+#define LOWER_LIMIT_OF_BORN     5
 #define UPPER_LIMIT_OF_BORN     8
 
 namespace s21 {

@@ -76,11 +76,11 @@ return is;
 }   //namespace s21
 
 int main() {
-    s21::Cave cave(10,10, 50);
-    //cave.InitializeRandomCave();
-    std::fstream fs;
-    fs.open("t.txt");
-    fs >> cave;
+    s21::Cave cave(50,50, 50);
+    cave.InitializeRandomCave();
+    //std::fstream fs;
+    //fs.open("t.txt");
+    //fs >> cave;
     cave.GenerateCave();
     cave.print();
 }
