@@ -53,7 +53,7 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/antoinco/A1_Maze-1/src/Maze
+CMAKE_SOURCE_DIR = /Users/antoinco/A1_Maze-1/src/View
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug
@@ -84,38 +84,83 @@ CMakeFiles/Maze.dir/Maze_autogen/mocs_compilation.cpp.s: cmake_force
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/Maze_autogen/mocs_compilation.cpp -o CMakeFiles/Maze.dir/Maze_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/Maze.dir/main.cpp.o: CMakeFiles/Maze.dir/flags.make
-CMakeFiles/Maze.dir/main.cpp.o: /Users/antoinco/A1_Maze-1/src/Maze/main.cpp
+CMakeFiles/Maze.dir/main.cpp.o: /Users/antoinco/A1_Maze-1/src/View/main.cpp
 CMakeFiles/Maze.dir/main.cpp.o: CMakeFiles/Maze.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Maze.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/main.cpp.o -MF CMakeFiles/Maze.dir/main.cpp.o.d -o CMakeFiles/Maze.dir/main.cpp.o -c /Users/antoinco/A1_Maze-1/src/Maze/main.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/main.cpp.o -MF CMakeFiles/Maze.dir/main.cpp.o.d -o CMakeFiles/Maze.dir/main.cpp.o -c /Users/antoinco/A1_Maze-1/src/View/main.cpp
 
 CMakeFiles/Maze.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Maze.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/Maze/main.cpp > CMakeFiles/Maze.dir/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/View/main.cpp > CMakeFiles/Maze.dir/main.cpp.i
 
 CMakeFiles/Maze.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Maze.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/Maze/main.cpp -o CMakeFiles/Maze.dir/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/View/main.cpp -o CMakeFiles/Maze.dir/main.cpp.s
 
 CMakeFiles/Maze.dir/View.cpp.o: CMakeFiles/Maze.dir/flags.make
-CMakeFiles/Maze.dir/View.cpp.o: /Users/antoinco/A1_Maze-1/src/Maze/View.cpp
+CMakeFiles/Maze.dir/View.cpp.o: /Users/antoinco/A1_Maze-1/src/View/View.cpp
 CMakeFiles/Maze.dir/View.cpp.o: CMakeFiles/Maze.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Maze.dir/View.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/View.cpp.o -MF CMakeFiles/Maze.dir/View.cpp.o.d -o CMakeFiles/Maze.dir/View.cpp.o -c /Users/antoinco/A1_Maze-1/src/Maze/View.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/View.cpp.o -MF CMakeFiles/Maze.dir/View.cpp.o.d -o CMakeFiles/Maze.dir/View.cpp.o -c /Users/antoinco/A1_Maze-1/src/View/View.cpp
 
 CMakeFiles/Maze.dir/View.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Maze.dir/View.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/Maze/View.cpp > CMakeFiles/Maze.dir/View.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/View/View.cpp > CMakeFiles/Maze.dir/View.cpp.i
 
 CMakeFiles/Maze.dir/View.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Maze.dir/View.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/Maze/View.cpp -o CMakeFiles/Maze.dir/View.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/View/View.cpp -o CMakeFiles/Maze.dir/View.cpp.s
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o: CMakeFiles/Maze.dir/flags.make
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o: /Users/antoinco/A1_Maze-1/src/Controller/Controller.cc
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o: CMakeFiles/Maze.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o -MF CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o.d -o CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o -c /Users/antoinco/A1_Maze-1/src/Controller/Controller.cc
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/Controller/Controller.cc > CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.i
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/Controller/Controller.cc -o CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.s
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o: CMakeFiles/Maze.dir/flags.make
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o: /Users/antoinco/A1_Maze-1/src/Model/Model.cc
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o: CMakeFiles/Maze.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o -MF CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o.d -o CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o -c /Users/antoinco/A1_Maze-1/src/Model/Model.cc
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/Model/Model.cc > CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.i
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/Model/Model.cc -o CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.s
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o: CMakeFiles/Maze.dir/flags.make
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o: /Users/antoinco/A1_Maze-1/src/Model/Maze.cc
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o: CMakeFiles/Maze.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o -MF CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o.d -o CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o -c /Users/antoinco/A1_Maze-1/src/Model/Maze.cc
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/antoinco/A1_Maze-1/src/Model/Maze.cc > CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.i
+
+CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/antoinco/A1_Maze-1/src/Model/Maze.cc -o CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.s
 
 # Object files for target Maze
 Maze_OBJECTS = \
 "CMakeFiles/Maze.dir/Maze_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Maze.dir/main.cpp.o" \
-"CMakeFiles/Maze.dir/View.cpp.o"
+"CMakeFiles/Maze.dir/View.cpp.o" \
+"CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o" \
+"CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o" \
+"CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o"
 
 # External object files for target Maze
 Maze_EXTERNAL_OBJECTS =
@@ -123,12 +168,15 @@ Maze_EXTERNAL_OBJECTS =
 Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/Maze_autogen/mocs_compilation.cpp.o
 Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/main.cpp.o
 Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/View.cpp.o
+Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Controller/Controller.cc.o
+Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Model.cc.o
+Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/Users/antoinco/A1_Maze-1/src/Model/Maze.cc.o
 Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/build.make
 Maze.app/Contents/MacOS/Maze: /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets
 Maze.app/Contents/MacOS/Maze: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 Maze.app/Contents/MacOS/Maze: /usr/local/lib/QtCore.framework/Versions/A/QtCore
 Maze.app/Contents/MacOS/Maze: CMakeFiles/Maze.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Maze.app/Contents/MacOS/Maze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Maze.app/Contents/MacOS/Maze"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Maze.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +188,6 @@ CMakeFiles/Maze.dir/clean:
 .PHONY : CMakeFiles/Maze.dir/clean
 
 CMakeFiles/Maze.dir/depend:
-	cd /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/antoinco/A1_Maze-1/src/Maze /Users/antoinco/A1_Maze-1/src/Maze /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/Maze.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/antoinco/A1_Maze-1/src/View /Users/antoinco/A1_Maze-1/src/View /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug /Users/antoinco/A1_Maze-1/src/build-Maze-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/Maze.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Maze.dir/depend
 

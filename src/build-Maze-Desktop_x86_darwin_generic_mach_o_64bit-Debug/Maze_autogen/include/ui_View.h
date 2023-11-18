@@ -75,8 +75,10 @@ public:
         Maze->setObjectName(QString::fromUtf8("Maze"));
         graphicsView_2 = new QGraphicsView(Maze);
         graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(40, 20, 500, 500));
+        graphicsView_2->setGeometry(QRect(40, 20, 504, 504));
+        graphicsView_2->setBaseSize(QSize(0, 0));
         graphicsView_2->setStyleSheet(QString::fromUtf8(""));
+        graphicsView_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         btn_load_file = new QPushButton(Maze);
         btn_load_file->setObjectName(QString::fromUtf8("btn_load_file"));
         btn_load_file->setGeometry(QRect(570, 20, 250, 50));
@@ -202,7 +204,7 @@ public:
         pushButton_3->setText(QCoreApplication::translate("View", "Load File", nullptr));
         TabWidget->setTabText(TabWidget->indexOf(Cave), QCoreApplication::translate("View", "Cave", nullptr));
         btn_load_file->setText(QCoreApplication::translate("View", "Load File", nullptr));
-        btn_import_file->setText(QCoreApplication::translate("View", "Import File", nullptr));
+        btn_import_file->setText(QCoreApplication::translate("View", "Save File", nullptr));
         label->setText(QCoreApplication::translate("View", "MAZE GENNERATING \n"
 "SETTING", nullptr));
         btn_generate_maze->setText(QCoreApplication::translate("View", "GENERATE", nullptr));

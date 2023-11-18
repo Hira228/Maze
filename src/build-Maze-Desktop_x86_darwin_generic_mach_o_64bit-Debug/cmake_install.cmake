@@ -1,4 +1,4 @@
-# Install script for directory: /Users/antoinco/A1_Maze-1/src/Maze
+# Install script for directory: /Users/antoinco/A1_Maze-1/src/View
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
