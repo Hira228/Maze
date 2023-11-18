@@ -2,7 +2,10 @@
 #define VIEW_H
 
 #include <QMainWindow>
-
+#include <QtCore>
+#include <QtGui>
+#include <QGraphicsScene>
+#include <QBrush>
 QT_BEGIN_NAMESPACE
 namespace Ui { class View; }
 QT_END_NAMESPACE
@@ -17,5 +20,7 @@ public:
 
 private:
     Ui::View *ui;
+    QGraphicsScene * scene;
+
 };
 #endif // VIEW_H
