@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Maze.dir/Maze_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Controller/Controller.cc.o"
   "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Controller/Controller.cc.o.d"
+  "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.o"
+  "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.o.d"
   "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Maze.cc.o"
   "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Maze.cc.o.d"
   "CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Model.cc.o"

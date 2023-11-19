@@ -190,6 +190,30 @@ Users/gradyzan/A1_Maze-1/src/Controller/Controller.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Controller/Controller.cc.s
 .PHONY : Users/gradyzan/A1_Maze-1/src/Controller/Controller.cc.s
 
+Users/gradyzan/A1_Maze-1/src/Model/Cave.o: Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.o
+.PHONY : Users/gradyzan/A1_Maze-1/src/Model/Cave.o
+
+# target to build an object file
+Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.o
+.PHONY : Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.o
+
+Users/gradyzan/A1_Maze-1/src/Model/Cave.i: Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.i
+.PHONY : Users/gradyzan/A1_Maze-1/src/Model/Cave.i
+
+# target to preprocess a source file
+Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.i
+.PHONY : Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.i
+
+Users/gradyzan/A1_Maze-1/src/Model/Cave.s: Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.s
+.PHONY : Users/gradyzan/A1_Maze-1/src/Model/Cave.s
+
+# target to generate assembly for a file
+Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.s
+.PHONY : Users/gradyzan/A1_Maze-1/src/Model/Cave.cc.s
+
 Users/gradyzan/A1_Maze-1/src/Model/Maze.o: Users/gradyzan/A1_Maze-1/src/Model/Maze.cc.o
 .PHONY : Users/gradyzan/A1_Maze-1/src/Model/Maze.o
 
@@ -302,6 +326,9 @@ help:
 	@echo "... Users/gradyzan/A1_Maze-1/src/Controller/Controller.o"
 	@echo "... Users/gradyzan/A1_Maze-1/src/Controller/Controller.i"
 	@echo "... Users/gradyzan/A1_Maze-1/src/Controller/Controller.s"
+	@echo "... Users/gradyzan/A1_Maze-1/src/Model/Cave.o"
+	@echo "... Users/gradyzan/A1_Maze-1/src/Model/Cave.i"
+	@echo "... Users/gradyzan/A1_Maze-1/src/Model/Cave.s"
 	@echo "... Users/gradyzan/A1_Maze-1/src/Model/Maze.o"
 	@echo "... Users/gradyzan/A1_Maze-1/src/Model/Maze.i"
 	@echo "... Users/gradyzan/A1_Maze-1/src/Model/Maze.s"

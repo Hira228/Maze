@@ -70,7 +70,14 @@ public:
         std::size_t rows,cols;
         file >> rows >> cols;
         Cave cave_(rows, cols);
-        file >> cave_;
+        for (size_t i =  1; i < cave_.cave_.size() - 1; ++i) {
+            for (size_t j = 1; j < cave_.cave_[i].size() - 1; ++j) file >> cave_.cave_[i][j];
+        }
+        // for (auto& vec : cave_.cave_) { 
+        // for (auto & elem : vec) { 
+        //         file >> elem;
+        //     }
+        // }
         file.close();
         return cave_;
     }

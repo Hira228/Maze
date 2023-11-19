@@ -10,11 +10,6 @@
 
 #define COUNT_OF_GENERATION     100
 
-#define LOWER_LIMIT_OF_LIVE     4
-#define UPPER_LIMIT_OF_LIVE     8
-#define LOWER_LIMIT_OF_BORN     5
-#define UPPER_LIMIT_OF_BORN     8
-
 namespace s21 {
 using value_type = int;
 using cave_type = std::vector<std::vector<value_type>>;
@@ -22,16 +17,21 @@ using limit_type = std::pair<value_type, value_type>;
 
 class Cave {
 private:
-cave_type cave_;
 cave_type temp_cave_;
-const value_type live_chance_;
+value_type live_chance_;
 limit_type live_limit;
 limit_type born_limit;
 value_type weight_;
 value_type height_;
 
+value_type LOWER_LIMIT_OF_LIVE = 1;  
+value_type UPPER_LIMIT_OF_LIVE = 8; 
+value_type LOWER_LIMIT_OF_BORN = 6;
+value_type UPPER_LIMIT_OF_BORN = 8;
+
 public:
 Cave();
+cave_type cave_;
 Cave(const std::size_t&, const std::size_t&, const value_type& = 49);
 void InitializeRandomCave();
 void GenerateCave();
@@ -43,6 +43,14 @@ bool GoodCave() const;
 value_type GetWeight() const { return weight_; }
 value_type GetHeight() const { return height_; }
 cave_type  GetCaveData() const { return cave_; } 
+void SetParameters(const value_type& rows,const value_type& cols, const value_type& life_chance, std::pair<value_type, value_type> live, std::pair<value_type, value_type> born) {
+    weight_ = rows;
+    height_ = cols;
+    live_chance_ = life_chance;
+    LOWER_LIMIT_OF_LIVE = live.first;
+    UPPER_LIMIT_OF_LIVE = live.second;
+    LOWER_LIMIT_OF_BORN = born.first;
+    UPPER_LIMIT_OF_BORN = born.second;}   
 };
 } // namespace s21
 

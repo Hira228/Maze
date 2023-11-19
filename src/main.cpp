@@ -19,11 +19,16 @@ int main() {
   //     }
   //  std::cout << maze;
   // s21::Model model;
-  s21::Controller controller(std::make_unique<typename s21::Model>());
+  // s21::Controller controller(std::make_unique<typename s21::Model>());
+  // std::cout << controller.ReadFromFileCave("./Controller/dfdf.txt");
+  s21::Cave cave = s21::FileManager<s21::Cave>::Read("./Controller/dfdf.txt");
+  cave.print();
+  
+
   // s21::Controller controller(std::make_unique(model));
 
-  controller.GenerateMaze(17, 17);
-  controller.SaveToFileMaze("./MazeExample/maze_17_17.txt");
+  // controller.GenerateMaze(17, 17);
+  // controller.SaveToFileMaze("./MazeExample/maze_17_17.txt");
   // controller.SolutionWave(std::make_pair<int,int>(1,2),std::make_pair<int,int>(3,4));
   // controller.GenerateMaze(7,7);
   //  controller.SaveToFileMaze("new maze");

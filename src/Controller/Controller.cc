@@ -23,4 +23,13 @@ namespace s21 {
     std::pair<std::pair<matrix,matrix>,std::vector<std::pair<size_t,size_t>>> Controller::get_data_maze() const { 
         return model->get_data_maze();
     }
+    pair Controller::get_paramters_cave() const noexcept {
+        return model->get_param_cave();
+    }
+    cave_type Controller::get_data_cave() const noexcept {
+        return model->get_data_cave();
+    }
+    bool Controller::ReadFromFileCave(const std::string& path) {
+        return model->ReadFromFileCave(path);
+    }
 }

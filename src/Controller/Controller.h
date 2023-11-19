@@ -20,6 +20,9 @@ class Controller {
   get_data_maze() const;
   pair get_paramets() const noexcept;
   pair get_paramters_cave() const noexcept;
+  cave_type get_data_cave() const noexcept;
+  bool GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, std::pair<value_type, value_type> live, std::pair<value_type, value_type> born) {model->GenerateCave(rows,cols,life_chance,live,born); }
+  bool ReadFromFileCave(const std::string& path);
 
  private:
   std::unique_ptr<Model> model;

@@ -28,20 +28,20 @@ public:
     QTabWidget *TabWidget;
     QWidget *Cave;
     QGraphicsView *graphicsView;
-    QPushButton *pushButton_3;
-    QPushButton *btn_save_to_file_2;
+    QPushButton *Button_Load_File_Cave;
+    QPushButton *Button_Save_File_Cave;
     QLabel *label_7;
     QLabel *label_15;
     QLabel *label_16;
-    QSpinBox *spin_box_rows_3;
-    QSpinBox *spin_box_rows_4;
+    QSpinBox *spin_cave_rows_;
+    QSpinBox *spin_cave_cols_;
     QLabel *label_17;
-    QSpinBox *spin_box_rows_5;
-    QPushButton *btn_generate_maze_3;
-    QSpinBox *spin_box_y_start_5;
-    QSpinBox *spin_box_y_finish_5;
-    QSpinBox *spin_box_x_finish_5;
-    QSpinBox *spin_box_x_start_5;
+    QSpinBox *spin_cave_life_chance;
+    QPushButton *btn_generate_cave_;
+    QSpinBox *spin_live_up;
+    QSpinBox *spin_born_up;
+    QSpinBox *spin_born_low;
+    QSpinBox *spin_live_low;
     QLabel *label_50;
     QLabel *label_51;
     QLabel *label_52;
@@ -87,24 +87,24 @@ public:
         Cave->setStyleSheet(QString::fromUtf8(""));
         graphicsView = new QGraphicsView(Cave);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(40, 20, 500, 500));
-        pushButton_3 = new QPushButton(Cave);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(570, 20, 250, 50));
+        graphicsView->setGeometry(QRect(40, 20, 503, 503));
+        Button_Load_File_Cave = new QPushButton(Cave);
+        Button_Load_File_Cave->setObjectName(QString::fromUtf8("Button_Load_File_Cave"));
+        Button_Load_File_Cave->setGeometry(QRect(570, 20, 250, 50));
         QFont font;
         font.setFamilies({QString::fromUtf8("Menlo")});
         font.setPointSize(24);
-        pushButton_3->setFont(font);
-        pushButton_3->setStyleSheet(QString::fromUtf8("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        Button_Load_File_Cave->setFont(font);
+        Button_Load_File_Cave->setStyleSheet(QString::fromUtf8("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
 ""));
-        btn_save_to_file_2 = new QPushButton(Cave);
-        btn_save_to_file_2->setObjectName(QString::fromUtf8("btn_save_to_file_2"));
-        btn_save_to_file_2->setGeometry(QRect(570, 80, 250, 50));
-        btn_save_to_file_2->setFont(font);
-        btn_save_to_file_2->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        Button_Save_File_Cave = new QPushButton(Cave);
+        Button_Save_File_Cave->setObjectName(QString::fromUtf8("Button_Save_File_Cave"));
+        Button_Save_File_Cave->setGeometry(QRect(570, 80, 250, 50));
+        Button_Save_File_Cave->setFont(font);
+        Button_Save_File_Cave->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
@@ -154,10 +154,10 @@ public:
 "font-weight: bold;\n"
 "}"));
         label_16->setAlignment(Qt::AlignCenter);
-        spin_box_rows_3 = new QSpinBox(Cave);
-        spin_box_rows_3->setObjectName(QString::fromUtf8("spin_box_rows_3"));
-        spin_box_rows_3->setGeometry(QRect(730, 250, 91, 33));
-        spin_box_rows_3->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_cave_rows_ = new QSpinBox(Cave);
+        spin_cave_rows_->setObjectName(QString::fromUtf8("spin_cave_rows_"));
+        spin_cave_rows_->setGeometry(QRect(730, 250, 91, 33));
+        spin_cave_rows_->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -165,11 +165,11 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_rows_3->setMaximum(50);
-        spin_box_rows_4 = new QSpinBox(Cave);
-        spin_box_rows_4->setObjectName(QString::fromUtf8("spin_box_rows_4"));
-        spin_box_rows_4->setGeometry(QRect(730, 300, 91, 33));
-        spin_box_rows_4->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_cave_rows_->setMaximum(50);
+        spin_cave_cols_ = new QSpinBox(Cave);
+        spin_cave_cols_->setObjectName(QString::fromUtf8("spin_cave_cols_"));
+        spin_cave_cols_->setGeometry(QRect(730, 300, 91, 33));
+        spin_cave_cols_->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -177,7 +177,7 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_rows_4->setMaximum(50);
+        spin_cave_cols_->setMaximum(50);
         label_17 = new QLabel(Cave);
         label_17->setObjectName(QString::fromUtf8("label_17"));
         label_17->setGeometry(QRect(545, 350, 181, 33));
@@ -190,10 +190,10 @@ public:
 "font-weight: bold;\n"
 "}"));
         label_17->setAlignment(Qt::AlignCenter);
-        spin_box_rows_5 = new QSpinBox(Cave);
-        spin_box_rows_5->setObjectName(QString::fromUtf8("spin_box_rows_5"));
-        spin_box_rows_5->setGeometry(QRect(730, 350, 91, 33));
-        spin_box_rows_5->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_cave_life_chance = new QSpinBox(Cave);
+        spin_cave_life_chance->setObjectName(QString::fromUtf8("spin_cave_life_chance"));
+        spin_cave_life_chance->setGeometry(QRect(730, 350, 91, 33));
+        spin_cave_life_chance->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -201,12 +201,12 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_rows_5->setMaximum(100);
-        btn_generate_maze_3 = new QPushButton(Cave);
-        btn_generate_maze_3->setObjectName(QString::fromUtf8("btn_generate_maze_3"));
-        btn_generate_maze_3->setGeometry(QRect(560, 400, 250, 50));
-        btn_generate_maze_3->setFont(font);
-        btn_generate_maze_3->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        spin_cave_life_chance->setMaximum(100);
+        btn_generate_cave_ = new QPushButton(Cave);
+        btn_generate_cave_->setObjectName(QString::fromUtf8("btn_generate_cave_"));
+        btn_generate_cave_->setGeometry(QRect(570, 400, 250, 50));
+        btn_generate_cave_->setFont(font);
+        btn_generate_cave_->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
@@ -216,10 +216,10 @@ public:
 "    border-style: inset;\n"
 "}\n"
 ""));
-        spin_box_y_start_5 = new QSpinBox(Cave);
-        spin_box_y_start_5->setObjectName(QString::fromUtf8("spin_box_y_start_5"));
-        spin_box_y_start_5->setGeometry(QRect(730, 510, 91, 33));
-        spin_box_y_start_5->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_live_up = new QSpinBox(Cave);
+        spin_live_up->setObjectName(QString::fromUtf8("spin_live_up"));
+        spin_live_up->setGeometry(QRect(730, 510, 91, 33));
+        spin_live_up->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -227,11 +227,11 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_y_start_5->setMaximum(8);
-        spin_box_y_finish_5 = new QSpinBox(Cave);
-        spin_box_y_finish_5->setObjectName(QString::fromUtf8("spin_box_y_finish_5"));
-        spin_box_y_finish_5->setGeometry(QRect(730, 590, 91, 33));
-        spin_box_y_finish_5->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_live_up->setMaximum(8);
+        spin_born_up = new QSpinBox(Cave);
+        spin_born_up->setObjectName(QString::fromUtf8("spin_born_up"));
+        spin_born_up->setGeometry(QRect(730, 590, 91, 33));
+        spin_born_up->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -239,11 +239,11 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_y_finish_5->setMaximum(8);
-        spin_box_x_finish_5 = new QSpinBox(Cave);
-        spin_box_x_finish_5->setObjectName(QString::fromUtf8("spin_box_x_finish_5"));
-        spin_box_x_finish_5->setGeometry(QRect(730, 550, 91, 33));
-        spin_box_x_finish_5->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_born_up->setMaximum(8);
+        spin_born_low = new QSpinBox(Cave);
+        spin_born_low->setObjectName(QString::fromUtf8("spin_born_low"));
+        spin_born_low->setGeometry(QRect(730, 550, 91, 33));
+        spin_born_low->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -251,11 +251,11 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_x_finish_5->setMaximum(8);
-        spin_box_x_start_5 = new QSpinBox(Cave);
-        spin_box_x_start_5->setObjectName(QString::fromUtf8("spin_box_x_start_5"));
-        spin_box_x_start_5->setGeometry(QRect(730, 470, 91, 33));
-        spin_box_x_start_5->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+        spin_born_low->setMaximum(8);
+        spin_live_low = new QSpinBox(Cave);
+        spin_live_low->setObjectName(QString::fromUtf8("spin_live_low"));
+        spin_live_low->setGeometry(QRect(730, 470, 91, 33));
+        spin_live_low->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "font-family: Menlo;\n"
 "font-size: 25pt;\n"
 "color:white;\n"
@@ -263,7 +263,7 @@ public:
 "    border-radius: 3px;\n"
 "    border: 1px solid rgb(255, 255, 255)\n"
 "}"));
-        spin_box_x_start_5->setMaximum(8);
+        spin_live_low->setMaximum(8);
         label_50 = new QLabel(Cave);
         label_50->setObjectName(QString::fromUtf8("label_50"));
         label_50->setGeometry(QRect(650, 590, 61, 30));
@@ -598,14 +598,14 @@ public:
     void retranslateUi(QMainWindow *View)
     {
         View->setWindowTitle(QCoreApplication::translate("View", "View", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("View", "Load File", nullptr));
-        btn_save_to_file_2->setText(QCoreApplication::translate("View", "Save File", nullptr));
+        Button_Load_File_Cave->setText(QCoreApplication::translate("View", "Load File", nullptr));
+        Button_Save_File_Cave->setText(QCoreApplication::translate("View", "Save File", nullptr));
         label_7->setText(QCoreApplication::translate("View", "CAVE GENNERATING \n"
 "SETTING", nullptr));
         label_15->setText(QCoreApplication::translate("View", "CAVE ROWS:", nullptr));
         label_16->setText(QCoreApplication::translate("View", "CAVE COLS:", nullptr));
         label_17->setText(QCoreApplication::translate("View", "LIFE CHANCE:", nullptr));
-        btn_generate_maze_3->setText(QCoreApplication::translate("View", "GENERATE", nullptr));
+        btn_generate_cave_->setText(QCoreApplication::translate("View", "GENERATE", nullptr));
         label_50->setText(QCoreApplication::translate("View", " UP:", nullptr));
         label_51->setText(QCoreApplication::translate("View", "LOW:", nullptr));
         label_52->setText(QCoreApplication::translate("View", "LOW:", nullptr));

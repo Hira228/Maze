@@ -11,7 +11,7 @@
 #include <QMessageBox>
 #include <cmath>
 #include <QGraphicsItem>
-    #include <QLine>
+#include <QLine>
 #include "../Controller/Controller.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class View; }
@@ -28,16 +28,20 @@ public:
 private:
     std::unique_ptr<Controller> controller;
     QGraphicsScene * scene;
+    QGraphicsScene * scene_;
     Ui::View *ui;
     void DrawMaze();
     void DrawSolvingMaze();
     void ClearLinesFromScene();
 
     void DrawCave();
+    void GenerateCave();
 private slots:
           void LoadFromFile();
+            void LoadFromFileCave();
           void GenerateMaze();
           void SaveToFileMaze();
+          void SaveToFileCave();
           void SolvingMaze();
 };
 }

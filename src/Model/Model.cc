@@ -4,7 +4,7 @@ namespace s21 {
 
 
 
-Model::Model(): maze(std::make_unique<typename s21::Maze>()) {}
+Model::Model(): maze(std::make_unique<typename s21::Maze>()),cave(std::make_unique<typename s21::Cave>()){}
 
 /// @brief Save fo File Maze 2 Matrix
 /// @param path 
@@ -18,7 +18,9 @@ bool Model::SaveToFileMaze(const std::string& path) const {
 }
 
  bool Model::SaveToFileCave(const std::string& path) const { 
-    return FileManager<int>::Save(path);
+    try {
+        return FileManager<Cave>::Save(*cave, path);
+    } catch(...) { return false; }
  }
 
 
@@ -59,8 +61,31 @@ std::pair<std::pair<matrix,matrix>,std::vector<std::pair<size_t,size_t>>> Model:
         return maze->get_paramets();
     }
 
- pair Model::get_paramets_cave() const noexcept { 
-        maze-> return ;
-    }
+ cave_type Model::get_data_cave() const noexcept { 
+        return cave->GetCaveData();
+ }
 
+pair Model::get_param_cave() const {
+    return std::make_pair(cave->GetWeight(), cave->GetHeight());
+}
+
+bool Model::GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, std::pair<value_type, value_type> live, std::pair<value_type, value_type> born) { 
+   try { 
+    cave->SetParameters(rows,cols,life_chance, live, born);
+    cave->GenerateCave();
+    return true;
+   } catch (...) { 
+    return false;
+   }
+}
+
+bool Model::ReadFromFileCave(const std::string& path) { 
+    try { 
+        cave.reset(std::make_unique<typename s21::Cave>(FileManager<Cave>::Read(path)).release());
+        cave->GenerateCave();
+        return cave->GoodCave();
+    } catch (...) { 
+        return false;
+    }
+}
 }

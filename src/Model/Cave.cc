@@ -4,13 +4,13 @@ namespace s21 {
 Cave::Cave() : weight_(0), height_(0), live_chance_(50) {}
 
 Cave::Cave(const std::size_t& width, const std::size_t& height, const value_type& live_chance) : 
-    cave_(width + 2, std::vector<value_type>(height + 2)), 
-    live_chance_(live_chance),
-    live_limit(std::make_pair(LOWER_LIMIT_OF_LIVE, UPPER_LIMIT_OF_LIVE)),
-    born_limit(std::make_pair(LOWER_LIMIT_OF_BORN, UPPER_LIMIT_OF_BORN))
+    cave_(weight_ + 2, std::vector<value_type>(height_ + 2)),
+    weight_(width),
+    height_(height),
+    live_chance_(live_chance)
     {
-        for (int i = 0; i < width + 2; ++i) {
-            for (int j = 0; j < height + 2; ++j) if (i == 0 || i == width + 1 || j == 0 || j == height + 1) cave_[i][j] = 1;
+                for (int i = 0; i < weight_ + 2; ++i) {
+            for (int j = 0; j < height_ + 2; ++j) if (i == 0 || i == weight_ + 1 || j == 0 || j == height_ + 1) cave_[i][j] = 1;
         }
     }
 
@@ -27,7 +27,15 @@ void Cave::InitializeRandomCave() {
 }
 
 void Cave::GenerateCave() {
+    //cave_type cave__(weight_ + 2, std::vector<value_type>(height_ + 2));
+    //{
+        // for (int i = 0; i < weight_ + 2; ++i) {
+        //     for (int j = 0; j < height_ + 2; ++j) if (i == 0 || i == weight_ + 1 || j == 0 || j == height_ + 1) cave__[i][j] = 1;
+        // }
+    //}
     value_type generation = 0;
+    //cave_ = std::move(cave__);
+    //InitializeRandomCave();
     temp_cave_ = cave_;
     while(generation++ != COUNT_OF_GENERATION) {
         for (std::size_t i = 1; i != cave_.size() - 1; ++i) {
@@ -84,20 +92,10 @@ std::ostream& operator<<(std::ostream& os, const Cave& cave) {
 bool Cave::GoodCave() const {
     if (weight_ <= 0 || height_ <= 0 || weight_ > 50 || height_ > 50) return false;
     for (const auto& vec: cave_) {
-        if (!all_of(vec.begin() + 1, vec.end() - 1, [](const auto& elem){ elem == 1 || elem == 0; })) return false;
+        if (!std::all_of(vec.begin() + 1, vec.end() - 1, [](const auto& elem){ return elem == 1 || elem == 0; })) return false;
     }
     return true;
 }
 
 
 }   //namespace s21
-
-int main() {
-    s21::Cave cave(50,50, 50);
-    cave.InitializeRandomCave();
-    //std::fstream fs;
-    //fs.open("t.txt");
-    //fs >> cave;
-    cave.GenerateCave();
-    cave.print();
-}

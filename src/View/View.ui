@@ -44,12 +44,12 @@
        <rect>
         <x>40</x>
         <y>20</y>
-        <width>500</width>
-        <height>500</height>
+        <width>503</width>
+        <height>503</height>
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="Button_Load_File_Cave">
       <property name="geometry">
        <rect>
         <x>570</x>
@@ -75,7 +75,7 @@
        <string>Load File</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_save_to_file_2">
+     <widget class="QPushButton" name="Button_Save_File_Cave">
       <property name="geometry">
        <rect>
         <x>570</x>
@@ -203,7 +203,7 @@ font-weight: bold;
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_rows_3">
+     <widget class="QSpinBox" name="spin_cave_rows_">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -226,7 +226,7 @@ font-weight: bold;
        <number>50</number>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_rows_4">
+     <widget class="QSpinBox" name="spin_cave_cols_">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -281,7 +281,7 @@ font-weight: bold;
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_rows_5">
+     <widget class="QSpinBox" name="spin_cave_life_chance">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -304,10 +304,10 @@ font-weight: bold;
        <number>100</number>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_generate_maze_3">
+     <widget class="QPushButton" name="btn_generate_cave_">
       <property name="geometry">
        <rect>
-        <x>560</x>
+        <x>570</x>
         <y>400</y>
         <width>250</width>
         <height>50</height>
@@ -335,7 +335,7 @@ QPushButton:pressed {
        <string>GENERATE</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_y_start_5">
+     <widget class="QSpinBox" name="spin_live_up">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -358,7 +358,7 @@ font-weight: bold;
        <number>8</number>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_y_finish_5">
+     <widget class="QSpinBox" name="spin_born_up">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -381,7 +381,7 @@ font-weight: bold;
        <number>8</number>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_x_finish_5">
+     <widget class="QSpinBox" name="spin_born_low">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -404,7 +404,7 @@ font-weight: bold;
        <number>8</number>
       </property>
      </widget>
-     <widget class="QSpinBox" name="spin_box_x_start_5">
+     <widget class="QSpinBox" name="spin_live_low">
       <property name="geometry">
        <rect>
         <x>730</x>
