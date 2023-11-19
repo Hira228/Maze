@@ -8,14 +8,11 @@ View::View(Controller&& controller_,QWidget *parent)
 {
     ui->setupUi(this);
     scene = new QGraphicsScene(QRect(0, 0, 500, 500));
-
     ui->graphicsView_2->setScene(scene);
     connect(ui->btn_load_file,SIGNAL(clicked()),this,SLOT(LoadFromFile()));
-//    auto [rows,cols] = controller->get_paramets();
-//    QVector<QVector<std::size_t>> matrix_vertical(rows, QVector<std::size_t>(cols, 0u));
-//    QVector<QVector<std::size_t>> matrix_horizontal(rows, QVector<std::size_t>(cols, 0u));
-
-
+    connect(ui->btn_save_to_file,SIGNAL(clicked()),this,SLOT(SaveToFileMaze()));
+    connect(ui->btn_generate_maze,SIGNAL(clicked()),this,SLOT(GenerateMaze()));
+    connect(ui->btn_solving_maze,SIGNAL(clicked()),this,SLOT(SolvingMaze()));
 }
 
 View::~View()
@@ -23,21 +20,38 @@ View::~View()
     delete ui;
     delete scene;
 }
-    void View::InitMatrix(const matrix& matrix_,qmatrix& qmatrix_) {
-        for (size_t i = 0; i < matrix_.size(); ++i) {
-            for (size_t j = 0; j < matrix_[i].size(); ++j) {
-                qmatrix_[i][j] = matrix_[i][j];
-            }
-        }
-    }
-
     void View::LoadFromFile() {
-        QString file_path = QFileDialog::getOpenFileName(this,"Choose file","../../../../MazeExample","All files(*.*);; txt(*.txt);");
+        QString file_path = QFileDialog::getOpenFileName(this,"Choose file","../../../../MazeExample","All files(*.*);; txt(*.txt)");
         if (file_path.isEmpty()) return;
         if (!controller->ReadFromFileMaze(file_path.toStdString())) QMessageBox::critical(this, "Error", "Something went wrong...");
         else { QMessageBox::information(this, "Success", "Data downloaded successfully");
         DrawMaze();
         }
+    }
+    void View::SaveToFileMaze() {
+        QString file_path = QFileDialog::getSaveFileName(this, "Save file",
+                                                  "../../../../MazeExample",
+                                                  "All Files(*);; txt(*.txt)");
+         if (file_path.isEmpty()) return;
+         if (!controller->SaveToFileMaze(file_path.toStdString())) QMessageBox::critical(this, "Error", "Something went wrong...");
+         else { QMessageBox::information(this, "Success", "Data saved successfully");
+         }
+
+    }
+
+    void View::GenerateMaze() {
+        if(controller->GenerateMaze(static_cast<size_t>(ui->spin_box_rows->value()),static_cast<size_t>(ui->spin_box_cols->value()))) {
+        DrawMaze();
+        } else {
+        QMessageBox::critical(this, "Error", "Something went wrong...");
+        }
+    }
+    void View::SolvingMaze() {
+       if(controller->SolvingMaze(std::make_pair(static_cast<size_t>(ui->spin_box_x_start->value()),static_cast<size_t>(ui->spin_box_y_start->value())),std::make_pair(static_cast<size_t>(ui->spin_box_x_finish->value()),static_cast<size_t>(ui->spin_box_y_finish->value())))) {
+        DrawSolvingMaze();
+       } else {
+       QMessageBox::critical(this, "Error", "Something went wrong...");
+       }
     }
     void View::DrawMaze() {
         scene->clear();
@@ -47,13 +61,13 @@ View::~View()
         const double size_lines_vert =  (500.f / static_cast<double>(rows));
 
         double current_pos_x = size_lines_horz, current_pos_y = size_lines_vert;
-        QPen pen(Qt::black);
-        pen.setWidthF(2);
+        QPen pen(Qt::white);
+        pen.setWidth(2);
 
 
-         scene->addLine(0,0,0,500,pen);
+         scene->addLine(QLineF(0,0,0,500),pen);
 
-         scene->addLine(0,0,500,0,pen);
+         scene->addLine(QLineF(0,0,500,0),pen);
 
 
 
@@ -66,6 +80,22 @@ View::~View()
                     scene->addLine(QLineF(current_pos_x * j,current_pos_y * (i + 1),current_pos_x * j + size_lines_horz,current_pos_y * (i + 1)),pen);
           }
         }
+
+    }
+
+    void View::DrawSolvingMaze() {
+    QPen pen(Qt::red);
+    pen.setWidth(2);
+    const auto solving_path = controller->get_data_maze().second;
+    const auto [rows,cols] = controller->get_paramets();
+    const double size_lines_horz = (500.f / static_cast<double>(cols));
+    const double size_lines_vert =  (500.f / static_cast<double>(rows));
+//        for (const auto& [x,y] : solving_path) {
+//        scene->addLine(x * size_lines_horz, (y + 0.5) * size_lines_vert, (x + 1) * size_lines_horz,(y+0.5) * size_lines_vert,pen);
+//        }
+    for (size_t i = 0; i != solving_path.size() - 1; ++i) {
+            scene->addLine((solving_path[i].first + 0.5) * size_lines_horz, (solving_path[i].second + 0.5) * size_lines_vert, (solving_path[i+1].first + 0.5) * size_lines_horz,(solving_path[i+1].second + 0.5) * size_lines_vert,pen);
+    }
 
     }
 

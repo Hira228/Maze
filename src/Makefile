@@ -21,9 +21,9 @@ OPTIMIZATIONFLAGS := -O3
 
 
 ifeq ($(UNAME), Linux)
- TEST_FLAGS +=  -lgtest -pthread -lm
+ TEST_FLAGS +=  -lgtest -pthread 
 else
- TEST_FLAGS += -lgtest -lm
+ TEST_FLAGS += -lgtest 
 endif
 
 all: uninstall clean $(TARGET) install dvi dist
@@ -34,14 +34,14 @@ $(TARGET) : clean build_temp_test
 
 
 install:
-	rm -rf View/MLP/Build_MLP
-	mkdir View/MLP/Build_MLP
-	cd View/MLP/Build_MLP && cmake ../
-	cd View/MLP/Build_MLP && make
-	open View/MLP/Build_MLP/MLP.app/
+	rm -rf View/Build_Maze
+	mkdir View/Build_Maze
+	cd View/Build_Maze && cmake ../
+	cd View/Build_Maze && make
+	open View/Build_Maze/View.app/
 
 uninstall:
-	rm -rf View/MLP/Build_MLP View/MLP/build  View/MLP/QCustomPlot-library
+	rm -rf View/Build_Maze View/build
 
 dist: install
 	tar --totals -cvf Maze.tar View Test Model Controller
@@ -54,7 +54,7 @@ build_temp_test:
 
 style: 
 	clang-format -i $(SRC_MODEL) $(SRC_CONTROLLER) $(SRC_TEST) $(SRC_VIEW) $(HEADER_MODEL) $(HEADER_CONTROLLER) $(HEADER_TEST) $(HEADER_VIEW)
-clean :
+clean : uninstall
 	rm -rf View/MLP/Build_MLP $(TARGET) *.a *.out *.tar Temp
 	# rm -rf Documentation
 	# rm -rf $(SRC_MODEL_PATH)/*.dSYM $(TESTS)/*.dSYM 

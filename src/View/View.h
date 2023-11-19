@@ -10,6 +10,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <cmath>
+#include <QGraphicsItem>
     #include <QLine>
 #include "../Controller/Controller.h"
 QT_BEGIN_NAMESPACE
@@ -21,7 +22,6 @@ class View : public QMainWindow
 {
     Q_OBJECT
 public:
-    using qmatrix = QVector<QVector<std::size_t>>;
     View(Controller&& controller_,QWidget *parent = nullptr);
     ~View();
 
@@ -29,10 +29,14 @@ private:
     std::unique_ptr<Controller> controller;
     QGraphicsScene * scene;
     Ui::View *ui;
-    void InitMatrix(const matrix&,qmatrix&);
     void DrawMaze();
+    void DrawSolvingMaze();
+    void ClearLinesFromScene();
 private slots:
           void LoadFromFile();
+          void GenerateMaze();
+          void SaveToFileMaze();
+          void SolvingMaze();
 };
 }
 #endif // VIEW_H
