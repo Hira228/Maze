@@ -19,6 +19,7 @@ class Controller {
   std::pair<std::pair<matrix, matrix>, std::vector<std::pair<size_t, size_t>>>
   get_data_maze() const;
   pair get_paramets() const noexcept;
+  pair get_paramters_cave() const noexcept;
 
  private:
   std::unique_ptr<Model> model;

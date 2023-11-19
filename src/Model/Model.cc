@@ -59,4 +59,8 @@ std::pair<std::pair<matrix,matrix>,std::vector<std::pair<size_t,size_t>>> Model:
         return maze->get_paramets();
     }
 
+ pair Model::get_paramets_cave() const noexcept { 
+        maze-> return ;
+    }
+
 }

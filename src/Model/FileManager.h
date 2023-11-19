@@ -3,6 +3,7 @@
 
 
 #include "Maze.h"
+#include "Cave.h"
 #include <fstream>
 
 namespace s21 {
@@ -61,14 +62,27 @@ class FileManager<Maze> {
 };
 
 template<>
-class FileManager<int> { 
-    public:
- static bool Save(const std::string path) { 
-         std::ofstream fout(path);
+class FileManager<Cave> {
+public:
+    static Cave Read(const std::string path) {
+        std::ifstream file(path);
+        if (!file.is_open()) return {};
+        std::size_t rows,cols;
+        file >> rows >> cols;
+        Cave cave_(rows, cols);
+        file >> cave_;
+        file.close();
+        return cave_;
+    }
+
+    static bool Save(const Cave& cave_, const std::string path) {
+        if (!cave_.GoodCave()) return false;
+        std::ofstream fout(path);
         if (!fout.is_open()) return false;
-        fout << 1;
+        fout << cave_.GetWeight() << cave_.GetHeight();
+        fout << cave_;
         fout.close();
-    return true;
+        return true;
     }
 };
 }

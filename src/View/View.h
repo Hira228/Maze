@@ -32,6 +32,8 @@ private:
     void DrawMaze();
     void DrawSolvingMaze();
     void ClearLinesFromScene();
+
+    void DrawCave();
 private slots:
           void LoadFromFile();
           void GenerateMaze();

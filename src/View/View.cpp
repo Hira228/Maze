@@ -8,11 +8,19 @@ View::View(Controller&& controller_,QWidget *parent)
 {
     ui->setupUi(this);
     scene = new QGraphicsScene(QRect(0, 0, 500, 500));
+    // maze
     ui->graphicsView_2->setScene(scene);
     connect(ui->btn_load_file,SIGNAL(clicked()),this,SLOT(LoadFromFile()));
     connect(ui->btn_save_to_file,SIGNAL(clicked()),this,SLOT(SaveToFileMaze()));
     connect(ui->btn_generate_maze,SIGNAL(clicked()),this,SLOT(GenerateMaze()));
     connect(ui->btn_solving_maze,SIGNAL(clicked()),this,SLOT(SolvingMaze()));
+
+    //cave
+    connect(ui->Button_Load_File_Cave, SIGNAL(clicked()), this, SLOT());
+    connect(ui->Button_Save_File_Cave, SIGNAL(clicked()), this, SLOT());
+    connect(ui->btn_generate_cave_, SIGNAL(clicked()), this, SLOT());
+
+
 }
 
 View::~View()
