@@ -90,9 +90,6 @@ View::~View()
     const auto [rows,cols] = controller->get_paramets();
     const double size_lines_horz = (500.f / static_cast<double>(cols));
     const double size_lines_vert =  (500.f / static_cast<double>(rows));
-//        for (const auto& [x,y] : solving_path) {
-//        scene->addLine(x * size_lines_horz, (y + 0.5) * size_lines_vert, (x + 1) * size_lines_horz,(y+0.5) * size_lines_vert,pen);
-//        }
     for (size_t i = 0; i != solving_path.size() - 1; ++i) {
             scene->addLine((solving_path[i].first + 0.5) * size_lines_horz, (solving_path[i].second + 0.5) * size_lines_vert, (solving_path[i+1].first + 0.5) * size_lines_horz,(solving_path[i+1].second + 0.5) * size_lines_vert,pen);
     }

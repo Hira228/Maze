@@ -38,7 +38,7 @@ install:
 	mkdir View/Build_Maze
 	cd View/Build_Maze && cmake ../
 	cd View/Build_Maze && make
-	open View/Build_Maze/View.app/
+	open View/Build_Maze/Maze.app/
 
 uninstall:
 	rm -rf View/Build_Maze View/build
@@ -56,6 +56,6 @@ style:
 	clang-format -i $(SRC_MODEL) $(SRC_CONTROLLER) $(SRC_TEST) $(SRC_VIEW) $(HEADER_MODEL) $(HEADER_CONTROLLER) $(HEADER_TEST) $(HEADER_VIEW)
 clean : uninstall
 	rm -rf View/MLP/Build_MLP $(TARGET) *.a *.out *.tar Temp
-	# rm -rf Documentation
+	 rm -rf Documentation
 	# rm -rf $(SRC_MODEL_PATH)/*.dSYM $(TESTS)/*.dSYM 
 	find . -type f -name '*.dSYM' -print -delete
