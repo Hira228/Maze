@@ -54,6 +54,7 @@ View::~View()
        }
     }
     void View::DrawMaze() {
+        ClearLinesFromScene();
         scene->clear();
         const auto [rows,cols] = controller->get_paramets();
         const auto [matrix_vetr,matrix_horz] = controller->get_data_maze().first;
@@ -82,8 +83,17 @@ View::~View()
         }
 
     }
-
+    void View::ClearLinesFromScene() {
+       if (!vec_line.isEmpty()) {
+       for (const auto& line : vec_line)
+           scene->removeItem(line);
+       for (auto& line : vec_line)
+           delete line;
+       vec_line.clear();
+       }
+    }
     void View::DrawSolvingMaze() {
+    ClearLinesFromScene();
     QPen pen(Qt::red);
     pen.setWidth(2);
     const auto solving_path = controller->get_data_maze().second;
@@ -91,9 +101,8 @@ View::~View()
     const double size_lines_horz = (500.f / static_cast<double>(cols));
     const double size_lines_vert =  (500.f / static_cast<double>(rows));
     for (size_t i = 0; i != solving_path.size() - 1; ++i) {
-            scene->addLine((solving_path[i].first + 0.5) * size_lines_horz, (solving_path[i].second + 0.5) * size_lines_vert, (solving_path[i+1].first + 0.5) * size_lines_horz,(solving_path[i+1].second + 0.5) * size_lines_vert,pen);
+            vec_line.push_back(scene->addLine((solving_path[i].first + 0.5) * size_lines_horz, (solving_path[i].second + 0.5) * size_lines_vert, (solving_path[i+1].first + 0.5) * size_lines_horz,(solving_path[i+1].second + 0.5) * size_lines_vert,pen));
     }
-
     }
 
 }

@@ -28,6 +28,7 @@ public:
 private:
     std::unique_ptr<Controller> controller;
     QGraphicsScene * scene;
+    QList<QGraphicsLineItem *> vec_line;
     Ui::View *ui;
     void DrawMaze();
     void DrawSolvingMaze();
