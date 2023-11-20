@@ -11,7 +11,7 @@ TESTS_PATH = ./Test/
 SRC_TEST = $(wildcard $(TESTS_PATH)*.cc)
 HEADER_TEST = $(wildcard $(TESTS_PATH)*.h)
 VIEW_PATH = ./View/
-SRC_VIEW = $(wildcard $(VIEW_PATH)*.cc)
+SRC_VIEW = $(wildcard $(VIEW_PATH)*.cpp)
 HEADER_VIEW = $(wildcard $(VIEW_PATH)*.h)
 TARGET = tests
 CXXFLAGS = -Wall -Wextra -Werror -Wpedantic -g
@@ -29,7 +29,7 @@ endif
 all: uninstall clean $(TARGET) install dvi dist
 
 $(TARGET) : clean build_temp_test
-	$(CXX) $(version) $(CXXFLAGS) $(SRC_TEST) $(SRC_MODEL) $(SRC_CONTROLLER)  $(TEST_FLAGS) -o $(TARGET) $(OPTIMIZATIONFLAGS)
+	$(CXX) $(version) $(CXXFLAGS) $(SRC_TEST) $(SRC_MODEL) $(SRC_CONTROLLER)  $(TEST_FLAGS) -o $(TARGET) $(OPTIMIZATIONFLAGS) $(SANITIZE)
 	./$(TARGET)
 
 
@@ -56,6 +56,5 @@ style:
 	clang-format -i $(SRC_MODEL) $(SRC_CONTROLLER) $(SRC_TEST) $(SRC_VIEW) $(HEADER_MODEL) $(HEADER_CONTROLLER) $(HEADER_TEST) $(HEADER_VIEW)
 clean : uninstall
 	rm -rf View/MLP/Build_MLP $(TARGET) *.a *.out *.tar Temp
-	 rm -rf Documentation
-	# rm -rf $(SRC_MODEL_PATH)/*.dSYM $(TESTS)/*.dSYM 
+	rm -rf Documentation
 	find . -type f -name '*.dSYM' -print -delete

@@ -3,4 +3,4 @@
 #include <gtest/gtest.h>
 
 #include "../Controller/Controller.h"
-#endif  // S21_A1_MAZE_TEST_UNIT_TEST_H
+#endif // S21_A1_MAZE_TEST_UNIT_TEST_H

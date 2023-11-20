@@ -2,7 +2,7 @@
 namespace s21 {
 
 template <typename T>
-bool CheckSizeMazeFile(const std::string& path, const T& rows, const T& cols) {
+bool CheckSizeMazeFile(const std::string &path, const T &rows, const T &cols) {
   std::ifstream fin(path);
   if (!fin.is_open()) {
     return false;
@@ -14,15 +14,15 @@ bool CheckSizeMazeFile(const std::string& path, const T& rows, const T& cols) {
 }
 
 template <typename T>
-bool CheckSizeMaze(const Controller& controller, const T& rows_,
-                   const T& cols_) {
+bool CheckSizeMaze(const Controller &controller, const T &rows_,
+                   const T &cols_) {
   auto [rows, cols] = controller.get_paramets();
   return rows_ == rows && cols_ == cols;
 }
 
 template <typename T>
-void CheckPath(const std::vector<std::pair<T, T>>& answer,
-               const std::vector<std::pair<T, T>>& expect) {
+void CheckPath(const std::vector<std::pair<T, T>> &answer,
+               const std::vector<std::pair<T, T>> &expect) {
   EXPECT_EQ(answer.size(), expect.size());
   for (std::size_t i = 0; i != expect.size(); ++i) {
     EXPECT_TRUE(answer[i].first == expect[i].first &&
@@ -82,7 +82,7 @@ TEST(GeneterationMaze, test_generation_maze_error_4) {
 }
 TEST(MazeSolution, test_solution_1) {
   Controller controller(std::make_unique<typename s21::Model>());
-  EXPECT_TRUE(controller.ReadFromFileMaze("./MazeExample/maze_4_4.txt"));
+  EXPECT_TRUE(controller.ReadFromFileMaze("./Example/maze_4_4.txt"));
   EXPECT_TRUE(CheckSizeMaze<>(controller, 4u, 4u));
   EXPECT_TRUE(
       controller.SolvingMaze(std::make_pair<std::size_t, std::size_t>(0u, 0u),
@@ -102,7 +102,7 @@ TEST(MazeSolution, test_solution_1) {
 
 TEST(MazeSolution, test_solution_2) {
   Controller controller(std::make_unique<typename s21::Model>());
-  EXPECT_TRUE(controller.ReadFromFileMaze("./MazeExample/maze_4_4.txt"));
+  EXPECT_TRUE(controller.ReadFromFileMaze("./Example/maze_4_4.txt"));
   EXPECT_TRUE(CheckSizeMaze<>(controller, 4u, 4u));
   EXPECT_TRUE(
       controller.SolvingMaze(std::make_pair<std::size_t, std::size_t>(0u, 0u),
@@ -120,7 +120,7 @@ TEST(MazeSolution, test_solution_2) {
 
 TEST(MazeSolution, test_solution_3) {
   Controller controller(std::make_unique<typename s21::Model>());
-  EXPECT_TRUE(controller.ReadFromFileMaze("./MazeExample/maze_4_4.txt"));
+  EXPECT_TRUE(controller.ReadFromFileMaze("./Example/maze_4_4.txt"));
   EXPECT_TRUE(CheckSizeMaze<>(controller, 4u, 4u));
   EXPECT_TRUE(
       controller.SolvingMaze(std::make_pair<std::size_t, std::size_t>(0u, 0u),
@@ -132,7 +132,7 @@ TEST(MazeSolution, test_solution_3) {
 }
 TEST(MazeSolution, test_solition_error) {
   Controller controller(std::make_unique<typename s21::Model>());
-  EXPECT_TRUE(controller.ReadFromFileMaze("./MazeExample/maze_4_4.txt"));
+  EXPECT_TRUE(controller.ReadFromFileMaze("./Example/maze_4_4.txt"));
   EXPECT_TRUE(CheckSizeMaze<>(controller, 4u, 4u));
   EXPECT_FALSE(controller.SolvingMaze(
       std::make_pair<std::size_t, std::size_t>(0u, 0u),
@@ -141,11 +141,11 @@ TEST(MazeSolution, test_solition_error) {
 
 TEST(MazeSolution, test_solition_error_2) {
   Controller controller(std::make_unique<typename s21::Model>());
-  EXPECT_TRUE(controller.ReadFromFileMaze("./MazeExample/maze_4_4.txt"));
+  EXPECT_TRUE(controller.ReadFromFileMaze("./Example/maze_4_4.txt"));
   EXPECT_TRUE(CheckSizeMaze<>(controller, 4u, 4u));
   EXPECT_FALSE(
       controller.SolvingMaze(std::make_pair<std::size_t, std::size_t>(0u, 0u),
                              std::make_pair<std::size_t, std::size_t>(4u, 4u)));
 }
 
-}  // namespace s21
+} // namespace s21

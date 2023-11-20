@@ -2,14 +2,13 @@
 
 namespace s21 {
 Maze::Maze() : parameters(std::make_pair(0, 0)) {}
-Maze::Maze(const std::size_t& rows, const std::size_t& cols)
+Maze::Maze(const std::size_t &rows, const std::size_t &cols)
     : parameters(std::make_pair(rows, cols)) {}
-Maze::Maze(const std::size_t& rows, const std::size_t& cols,
-           const matrix& value_vertical_, const matrix& value_horizontal_)
-    : parameters(std::make_pair(rows, cols)),
-      value_vertical(value_vertical_),
+Maze::Maze(const std::size_t &rows, const std::size_t &cols,
+           const matrix &value_vertical_, const matrix &value_horizontal_)
+    : parameters(std::make_pair(rows, cols)), value_vertical(value_vertical_),
       value_horizontal(value_horizontal_) {}
-void Maze::set_parameters(const std::size_t& rows, const std::size_t& cols) {
+void Maze::set_parameters(const std::size_t &rows, const std::size_t &cols) {
   parameters.first = rows;
   parameters.second = cols;
 }
@@ -18,14 +17,14 @@ bool Maze::IsGoodMaze() const {
   if (parameters.first == 0 or parameters.second == 0 or
       parameters.first > 50 or parameters.second > 50)
     return false;
-  for (const auto& vec : value_vertical) {
+  for (const auto &vec : value_vertical) {
     if (!std::all_of(vec.begin(), vec.end(),
-                     [](const auto& elem) { return elem == 0 or elem == 1; }))
+                     [](const auto &elem) { return elem == 0 or elem == 1; }))
       return false;
   }
-  for (const auto& vec : value_horizontal) {
+  for (const auto &vec : value_horizontal) {
     if (!std::all_of(vec.begin(), vec.end(),
-                     [](const auto& elem) { return elem == 0 or elem == 1; }))
+                     [](const auto &elem) { return elem == 0 or elem == 1; }))
       return false;
   }
   return true;
@@ -52,12 +51,12 @@ std::size_t Maze::get_rand() noexcept {
   return distribution(gen);
   // return v[k++];
 }
-void Maze::InitSetNumber(std::vector<std::size_t>& vec) noexcept {
+void Maze::InitSetNumber(std::vector<std::size_t> &vec) noexcept {
   for (; count != parameters.second + 1; ++count) {
     vec.push_back(count);
   }
 }
-void Maze::VerticalRoad(std::vector<std::size_t>& vec) noexcept {
+void Maze::VerticalRoad(std::vector<std::size_t> &vec) noexcept {
   for (std::size_t i = 0; i != parameters.second - 1; ++i) {
     std::size_t temp = get_rand();
     if (temp) {
@@ -68,22 +67,24 @@ void Maze::VerticalRoad(std::vector<std::size_t>& vec) noexcept {
       } else {
         std::for_each(vec.begin(), vec.end(),
                       [const_val = std::cref(vec[i]),
-                       change_val = std::cref(vec[i + 1])](auto& x) {
-                        if (x == change_val) x = const_val;
+                       change_val = std::cref(vec[i + 1])](auto &x) {
+                        if (x == change_val)
+                          x = const_val;
                       });
       }
     }
   }
 }
-bool Maze::CheckCountHorizontal(const std::vector<std::size_t>& vec,
-                                const std::size_t& val) const noexcept {
+bool Maze::CheckCountHorizontal(const std::vector<std::size_t> &vec,
+                                const std::size_t &val) const noexcept {
   std::size_t count_temp = -1;
   for (std::size_t i = 0; i < vec.size(); i++) {
-    if ((vec[i] == val) && (!value_horizontal[current_row][i])) ++count_temp;
+    if ((vec[i] == val) && (!value_horizontal[current_row][i]))
+      ++count_temp;
   }
   return count_temp ? true : false;
 }
-void Maze::HorizontalRoad(std::vector<std::size_t>& vec) noexcept {
+void Maze::HorizontalRoad(std::vector<std::size_t> &vec) noexcept {
   for (std::size_t i = 0; i != parameters.second; ++i) {
     std::size_t temp = get_rand();
     if (temp) {
@@ -92,7 +93,7 @@ void Maze::HorizontalRoad(std::vector<std::size_t>& vec) noexcept {
     }
   }
 }
-void Maze::ChangeSetNumber(std::vector<std::size_t>& vec) noexcept {
+void Maze::ChangeSetNumber(std::vector<std::size_t> &vec) noexcept {
   for (std::size_t i = 0; i != parameters.second; ++i) {
     if (value_horizontal[current_row][i]) {
       vec[i] = count;
@@ -101,14 +102,15 @@ void Maze::ChangeSetNumber(std::vector<std::size_t>& vec) noexcept {
   }
   ++current_row;
 }
-void Maze::HandlerLast(std::vector<std::size_t>& vec) noexcept {
+void Maze::HandlerLast(std::vector<std::size_t> &vec) noexcept {
   for (std::size_t i = 0; i != parameters.second - 1; ++i) {
     if (vec[i] != vec[i + 1]) {
       value_vertical[current_row - 1][i] = 0;
       std::for_each(vec.begin(), vec.end(),
                     [const_val = std::cref(vec[i]),
                      change_val = std::cref(vec[i + 1])](auto x) {
-                      if (x == change_val) x = const_val;
+                      if (x == change_val)
+                        x = const_val;
                     });
     }
   }
@@ -116,7 +118,7 @@ void Maze::HandlerLast(std::vector<std::size_t>& vec) noexcept {
 
 bool Maze::CheckStepByDirection(
     enum Direction direction_,
-    const std::pair<const int&, const int&> position) const {
+    const std::pair<const int &, const int &> position) const {
   if (direction_ == Direction::kLeft) {
     return (position.first > -1 &&
             !value_vertical[position.second][position.first])
@@ -145,8 +147,8 @@ bool Maze::CheckStepByDirection(
 }
 
 void Maze::WaveAlgorithm(
-    const std::pair<const std::size_t, const std::size_t>& from,
-    const std::pair<const std::size_t, const std::size_t>& to) {
+    const std::pair<const std::size_t, const std::size_t> &from,
+    const std::pair<const std::size_t, const std::size_t> &to) {
   matrix way(parameters.first, std::vector<std::size_t>(parameters.second, 0));
   way[from.second][from.first] = 1;
   std::size_t step = 1;
@@ -155,7 +157,7 @@ void Maze::WaveAlgorithm(
   while (!CheckEnd(way, to)) {
     Waves waves;
     ++step;
-    for (const auto& vec : old_wave.waves) {
+    for (const auto &vec : old_wave.waves) {
       for (auto [bool_value, step_value, position] :
            {Wave(step, vec.position.first - 1, vec.position.second,
                  CheckStepByDirection(Direction::kLeft,
@@ -186,8 +188,8 @@ void Maze::WaveAlgorithm(
 }
 
 void Maze::SolutionWave(
-    const std::pair<std::size_t, std::size_t>& from,
-    const std::pair<const std::size_t, const std::size_t>& to) {
+    const std::pair<std::size_t, std::size_t> &from,
+    const std::pair<const std::size_t, const std::size_t> &to) {
   path.clear();
   auto [x, y] = from;
   path.emplace_back(x, y);
@@ -219,8 +221,8 @@ std::vector<std::pair<size_t, size_t>> Maze::get_path() const noexcept {
 }
 
 bool Maze::CheckEnd(
-    const matrix& map,
-    const std::pair<const std::size_t, const std::size_t>& to) const {
+    const matrix &map,
+    const std::pair<const std::size_t, const std::size_t> &to) const {
   return map[to.second][to.first];
 }
 
@@ -236,7 +238,7 @@ Maze::get_data() const {
 }
 pair Maze::get_paramets() const { return parameters; }
 
-std::ostream& operator<<(std::ostream& out, const Maze& Maze) {
+std::ostream &operator<<(std::ostream &out, const Maze &Maze) {
   out << "====Vertical====\n";
   for (std::size_t i = 0; i < Maze.value_vertical.size(); ++i) {
     for (std::size_t j = 0; j < Maze.value_vertical[i].size(); ++j) {
@@ -255,8 +257,8 @@ std::ostream& operator<<(std::ostream& out, const Maze& Maze) {
 }
 
 bool Maze::SolvingMaze(
-    const std::pair<const std::size_t, const std::size_t>& to,
-    const std::pair<const std::size_t, const std::size_t>& from) {
+    const std::pair<const std::size_t, const std::size_t> &to,
+    const std::pair<const std::size_t, const std::size_t> &from) {
   if (CheckSizePoint(to, from)) {
     WaveAlgorithm(to, from);
     SolutionWave(from, to);
@@ -265,7 +267,7 @@ bool Maze::SolvingMaze(
   return true;
 }
 
-bool Maze::CheckSizePoint(const pair& to, const pair& from) {
+bool Maze::CheckSizePoint(const pair &to, const pair &from) {
   return (to.first > parameters.first - 1 or
           to.second > parameters.second - 1 or
           from.first > parameters.first - 1 or
@@ -278,7 +280,8 @@ bool Maze::CheckSizePoint(const pair& to, const pair& from) {
 /// @return If invalid input data - false, True - New maze is generated
 bool Maze::GenerateMaze() {
   clear();
-  if (!IsGoodMaze()) return false;
+  if (!IsGoodMaze())
+    return false;
   std::vector<std::size_t> set_number;
   InitValueMatrix();
   InitSetNumber(set_number);
@@ -292,10 +295,10 @@ bool Maze::GenerateMaze() {
 }
 matrix Maze::get_way() const noexcept { return way; }
 
-Wave::Wave(const std::size_t& step_value_, const std::pair<int, int>& position_)
+Wave::Wave(const std::size_t &step_value_, const std::pair<int, int> &position_)
     : step_value(step_value_), position(position_) {}
-Wave::Wave(const std::size_t& step_value_, const int& x_, const int& y_,
-           const bool& val)
+Wave::Wave(const std::size_t &step_value_, const int &x_, const int &y_,
+           const bool &val)
     : value(val), step_value(step_value_), position(std::make_pair(x_, y_)) {}
-Waves::Waves(const Wave& wave_) : waves(1, wave_) {}
-}  // namespace s21
+Waves::Waves(const Wave &wave_) : waves(1, wave_) {}
+} // namespace s21

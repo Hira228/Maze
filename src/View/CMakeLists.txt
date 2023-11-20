@@ -26,7 +26,8 @@ set(PROJECT_SOURCES
          ../Model/Model.cc
          ../Model/Maze.cc
          ../Model/Maze.h
-
+         ../Model/Cave.h
+         ../Model/Cave.cc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
