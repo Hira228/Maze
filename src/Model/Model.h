@@ -2,7 +2,8 @@
 #define S21_A1_MAZE_MODEL_MODEL_H
 #include "FileManager.h"
 #include "Maze.h"
-#include "memory"
+#include <memory>
+#include <thread>
 
 namespace s21 {
 class Model {
@@ -23,9 +24,9 @@ class Model {
   pair get_paramets() const noexcept;
   cave_type get_data_cave() const noexcept;
   pair get_param_cave() const;
-  bool GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, std::pair<value_type, value_type> live, std::pair<value_type, value_type> born);
-  bool ReadFromFileCave(const std::string& path);
-
+  bool GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u);
+  bool ReadFromFileCave(const std::string& path, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u);
+  std::vector<cave_type> GetIterators() { return cave->GetIterators(); }
 
  private:
   std::unique_ptr<Maze> maze;

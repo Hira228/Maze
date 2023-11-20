@@ -1,20 +1,27 @@
 #include "Cave.h"
 
 namespace s21 {
-Cave::Cave() : weight_(0), height_(0), live_chance_(50) {}
+Cave::Cave() :  weight_(0),height_(0), live_chance_(50) {}
 
-Cave::Cave(const std::size_t& width, const std::size_t& height, const value_type& live_chance) : 
-    cave_(weight_ + 2, std::vector<value_type>(height_ + 2)),
+Cave::Cave(const std::size_t& width, const std::size_t& height, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u, const value_type& live_chance) : 
     weight_(width),
     height_(height),
-    live_chance_(live_chance)
+    live_limit(std::make_pair(l_d, l_u)),
+    born_limit(std::make_pair(b_d, b_u)),
+    live_chance_(live_chance),
+        cave_(weight_ + 2, std::vector<value_type>(height_ + 2))
     {
-                for (int i = 0; i < weight_ + 2; ++i) {
+        for (int i = 0; i < weight_ + 2; ++i) {
             for (int j = 0; j < height_ + 2; ++j) if (i == 0 || i == weight_ + 1 || j == 0 || j == height_ + 1) cave_[i][j] = 1;
         }
     }
 
 void Cave::InitializeRandomCave() {
+    if(cave_.size() != static_cast<size_t>(weight_ + 2)) cave_.resize(weight_ + 2);
+    for (int i = 0; i < weight_ + 2; ++i) {
+        if(cave_[i].size() != static_cast<size_t>(height_ + 2)) cave_[i].resize(height_ + 2);
+        for (int j = 0; j < height_ + 2; ++j) if (i == 0 || i == weight_ + 1 || j == 0 || j == height_ + 1) cave_[i][j] = 1;
+    }
     std::default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
     std::uniform_int_distribution<int> dist(0, 100);
 
@@ -26,16 +33,10 @@ void Cave::InitializeRandomCave() {
     }
 }
 
-void Cave::GenerateCave() {
-    //cave_type cave__(weight_ + 2, std::vector<value_type>(height_ + 2));
-    //{
-        // for (int i = 0; i < weight_ + 2; ++i) {
-        //     for (int j = 0; j < height_ + 2; ++j) if (i == 0 || i == weight_ + 1 || j == 0 || j == height_ + 1) cave__[i][j] = 1;
-        // }
-    //}
+bool Cave::GenerateCave() {
+    if (!GoodCave()) return false;
+    iterators.clear();
     value_type generation = 0;
-    //cave_ = std::move(cave__);
-    //InitializeRandomCave();
     temp_cave_ = cave_;
     while(generation++ != COUNT_OF_GENERATION) {
         for (std::size_t i = 1; i != cave_.size() - 1; ++i) {
@@ -45,8 +46,16 @@ void Cave::GenerateCave() {
                 else if(cave_[i][j] == 0 && (count_of_living_neighbors > born_limit.first && count_of_living_neighbors <= born_limit.second)) temp_cave_[i][j] = 1; 
             }
         }
+            if (generation > 1) {
+                if (std::equal(temp_cave_.begin(), temp_cave_.end(), iterators[iterators.size() - 1].begin()))
+                {
+                    break;
+                }
+            }
         std::copy(temp_cave_.begin(), temp_cave_.end(), cave_.begin());
+        iterators.push_back(cave_);
     }
+    return true;
 }
 value_type Cave::CountLiveNeighbours(const std::size_t& rows_, const std::size_t cols_) {
     value_type count = 0;

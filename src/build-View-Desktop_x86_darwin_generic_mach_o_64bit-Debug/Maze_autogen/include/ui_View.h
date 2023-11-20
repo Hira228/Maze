@@ -15,6 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
@@ -48,6 +49,11 @@ public:
     QLabel *label_53;
     QLabel *label_54;
     QLabel *label_55;
+    QRadioButton *automatic_button;
+    QRadioButton *handheld_button;
+    QPushButton *go_to_next_iteration_button;
+    QPushButton *slow_automaric_button;
+    QSpinBox *spin_cave_sleep;
     QWidget *Maze;
     QGraphicsView *graphicsView_2;
     QPushButton *btn_load_file;
@@ -77,7 +83,7 @@ public:
         View->resize(849, 678);
         centralwidget = new QWidget(View);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        centralwidget->setStyleSheet(QString::fromUtf8("bckground-color:grey;"));
+        centralwidget->setStyleSheet(QString::fromUtf8("background-color:grey;"));
         TabWidget = new QTabWidget(centralwidget);
         TabWidget->setObjectName(QString::fromUtf8("TabWidget"));
         TabWidget->setGeometry(QRect(-10, 10, 861, 671));
@@ -95,25 +101,35 @@ public:
         font.setFamilies({QString::fromUtf8("Menlo")});
         font.setPointSize(24);
         Button_Load_File_Cave->setFont(font);
-        Button_Load_File_Cave->setStyleSheet(QString::fromUtf8("background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
-"    border-radius: 3px;\n"
-"    border: 1px solid #333333;\n"
-"    color: white;\n"
-""));
-        Button_Save_File_Cave = new QPushButton(Cave);
-        Button_Save_File_Cave->setObjectName(QString::fromUtf8("Button_Save_File_Cave"));
-        Button_Save_File_Cave->setGeometry(QRect(570, 80, 250, 50));
-        Button_Save_File_Cave->setFont(font);
-        Button_Save_File_Cave->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        Button_Load_File_Cave->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
 "}\n"
 "QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
 "    border-style: inset;\n"
 "}\n"
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}\n"
 ""));
+        Button_Save_File_Cave = new QPushButton(Cave);
+        Button_Save_File_Cave->setObjectName(QString::fromUtf8("Button_Save_File_Cave"));
+        Button_Save_File_Cave->setGeometry(QRect(570, 80, 250, 50));
+        Button_Save_File_Cave->setFont(font);
+        Button_Save_File_Cave->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid #333333;\n"
+"    color: white;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
+"    border-style: inset;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}"));
         label_7 = new QLabel(Cave);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(570, 150, 251, 60));
@@ -206,14 +222,17 @@ public:
         btn_generate_cave_->setObjectName(QString::fromUtf8("btn_generate_cave_"));
         btn_generate_cave_->setGeometry(QRect(570, 400, 250, 50));
         btn_generate_cave_->setFont(font);
-        btn_generate_cave_->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        btn_generate_cave_->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
 "}\n"
 "QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
 "    border-style: inset;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
 "}\n"
 ""));
         spin_live_up = new QSpinBox(Cave);
@@ -336,6 +355,85 @@ public:
 "font-weight: bold;\n"
 "}"));
         label_55->setAlignment(Qt::AlignCenter);
+        automatic_button = new QRadioButton(Cave);
+        automatic_button->setObjectName(QString::fromUtf8("automatic_button"));
+        automatic_button->setGeometry(QRect(575, 220, 123, 25));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Menlo")});
+        font2.setPointSize(18);
+        automatic_button->setFont(font2);
+        automatic_button->setStyleSheet(QString::fromUtf8("QRadioButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid #333333;\n"
+"    color: white;\n"
+"}\n"
+"QRadioButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
+"    border-style: inset;\n"
+"}"));
+        automatic_button->setChecked(true);
+        handheld_button = new QRadioButton(Cave);
+        handheld_button->setObjectName(QString::fromUtf8("handheld_button"));
+        handheld_button->setGeometry(QRect(703, 220, 117, 25));
+        handheld_button->setFont(font2);
+        handheld_button->setStyleSheet(QString::fromUtf8("QRadioButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid #333333;\n"
+"    color: white;\n"
+"}\n"
+"QRadioButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
+"    border-style: inset;\n"
+"}"));
+        go_to_next_iteration_button = new QPushButton(Cave);
+        go_to_next_iteration_button->setObjectName(QString::fromUtf8("go_to_next_iteration_button"));
+        go_to_next_iteration_button->setGeometry(QRect(40, 540, 181, 71));
+        QFont font3;
+        font3.setPointSize(14);
+        go_to_next_iteration_button->setFont(font3);
+        go_to_next_iteration_button->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid #333333;\n"
+"    color: white;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
+"    border-style: inset;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}\n"
+""));
+        slow_automaric_button = new QPushButton(Cave);
+        slow_automaric_button->setObjectName(QString::fromUtf8("slow_automaric_button"));
+        slow_automaric_button->setGeometry(QRect(240, 540, 181, 71));
+        slow_automaric_button->setFont(font3);
+        slow_automaric_button->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid #333333;\n"
+"    color: white;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
+"    border-style: inset;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}\n"
+""));
+        spin_cave_sleep = new QSpinBox(Cave);
+        spin_cave_sleep->setObjectName(QString::fromUtf8("spin_cave_sleep"));
+        spin_cave_sleep->setGeometry(QRect(440, 540, 101, 71));
+        spin_cave_sleep->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
+"font-family: Menlo;\n"
+"font-size: 25pt;\n"
+"color:white;\n"
+"font-weight: bold;\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid rgb(255, 255, 255)\n"
+"}"));
+        spin_cave_sleep->setAlignment(Qt::AlignCenter);
+        spin_cave_sleep->setMaximum(10000);
         TabWidget->addTab(Cave, QString());
         Maze = new QWidget();
         Maze->setObjectName(QString::fromUtf8("Maze"));
@@ -350,32 +448,34 @@ public:
         btn_load_file->setObjectName(QString::fromUtf8("btn_load_file"));
         btn_load_file->setGeometry(QRect(570, 20, 250, 50));
         btn_load_file->setFont(font);
-        btn_load_file->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f); \n"
-"color: white;\n"
-"border: 1px solid #333333;\n"
-"border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);\n"
-"    border-style: inset;\n"
-"}\n"
-""));
-        btn_save_to_file = new QPushButton(Maze);
-        btn_save_to_file->setObjectName(QString::fromUtf8("btn_save_to_file"));
-        btn_save_to_file->setGeometry(QRect(570, 80, 250, 50));
-        btn_save_to_file->setFont(font);
-        btn_save_to_file->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        btn_load_file->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
 "}\n"
 "QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
 "    border-style: inset;\n"
 "}\n"
-""));
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}"));
+        btn_save_to_file = new QPushButton(Maze);
+        btn_save_to_file->setObjectName(QString::fromUtf8("btn_save_to_file"));
+        btn_save_to_file->setGeometry(QRect(570, 80, 250, 50));
+        btn_save_to_file->setFont(font);
+        btn_save_to_file->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+"    border-radius: 3px;\n"
+"    border: 1px solid #333333;\n"
+"    color: white;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
+"    border-style: inset;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}"));
         label = new QLabel(Maze);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(570, 150, 251, 60));
@@ -392,16 +492,18 @@ public:
         btn_generate_maze->setObjectName(QString::fromUtf8("btn_generate_maze"));
         btn_generate_maze->setGeometry(QRect(570, 380, 250, 50));
         btn_generate_maze->setFont(font);
-        btn_generate_maze->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        btn_generate_maze->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
 "}\n"
 "QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
 "    border-style: inset;\n"
 "}\n"
-""));
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}"));
         label_2 = new QLabel(Maze);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(570, 250, 161, 30));
@@ -454,16 +556,18 @@ public:
         btn_solving_maze->setObjectName(QString::fromUtf8("btn_solving_maze"));
         btn_solving_maze->setGeometry(QRect(180, 560, 250, 50));
         btn_solving_maze->setFont(font);
-        btn_solving_maze->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
+        btn_solving_maze->setStyleSheet(QString::fromUtf8("QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);\n"
 "    border-radius: 3px;\n"
 "    border: 1px solid #333333;\n"
 "    color: white;\n"
 "}\n"
 "QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);\n"
 "    border-style: inset;\n"
 "}\n"
-""));
+"QPushButton:hover {\n"
+"    background-color: #595959;\n"
+"}"));
         spin_box_x_start = new QSpinBox(Maze);
         spin_box_x_start->setObjectName(QString::fromUtf8("spin_box_x_start"));
         spin_box_x_start->setGeometry(QRect(730, 470, 91, 33));
@@ -612,6 +716,10 @@ public:
         label_53->setText(QCoreApplication::translate("View", " UP:", nullptr));
         label_54->setText(QCoreApplication::translate("View", "LIVE", nullptr));
         label_55->setText(QCoreApplication::translate("View", "BORN", nullptr));
+        automatic_button->setText(QCoreApplication::translate("View", "Automatic", nullptr));
+        handheld_button->setText(QCoreApplication::translate("View", "Handheld", nullptr));
+        go_to_next_iteration_button->setText(QCoreApplication::translate("View", "GO TO NEXT ITERATION", nullptr));
+        slow_automaric_button->setText(QCoreApplication::translate("View", "SLOW AUTOMATIC", nullptr));
         TabWidget->setTabText(TabWidget->indexOf(Cave), QCoreApplication::translate("View", "Cave", nullptr));
         btn_load_file->setText(QCoreApplication::translate("View", "Load File", nullptr));
         btn_save_to_file->setText(QCoreApplication::translate("View", "Save File", nullptr));

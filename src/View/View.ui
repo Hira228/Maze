@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">bckground-color:grey;</string>
+    <string notr="true">background-color:grey;</string>
    </property>
    <widget class="QTabWidget" name="TabWidget">
     <property name="geometry">
@@ -65,10 +65,18 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
     border-radius: 3px;
     border: 1px solid #333333;
     color: white;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
+    border-style: inset;
+}
+QPushButton:hover {
+    background-color: #595959;
+}
 </string>
       </property>
       <property name="text">
@@ -91,16 +99,18 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
     border-radius: 3px;
     border: 1px solid #333333;
     color: white;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
     border-style: inset;
 }
-</string>
+QPushButton:hover {
+    background-color: #595959;
+}</string>
       </property>
       <property name="text">
        <string>Save File</string>
@@ -320,14 +330,17 @@ font-weight: bold;
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
     border-radius: 3px;
     border: 1px solid #333333;
     color: white;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
     border-style: inset;
+}
+QPushButton:hover {
+    background-color: #595959;
 }
 </string>
       </property>
@@ -619,6 +632,161 @@ font-weight: bold;
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QRadioButton" name="automatic_button">
+      <property name="geometry">
+       <rect>
+        <x>575</x>
+        <y>220</y>
+        <width>123</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Menlo</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+    border-radius: 3px;
+    border: 1px solid #333333;
+    color: white;
+}
+QRadioButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
+    border-style: inset;
+}</string>
+      </property>
+      <property name="text">
+       <string>Automatic</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="handheld_button">
+      <property name="geometry">
+       <rect>
+        <x>703</x>
+        <y>220</y>
+        <width>117</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Menlo</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+    border-radius: 3px;
+    border: 1px solid #333333;
+    color: white;
+}
+QRadioButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
+    border-style: inset;
+}</string>
+      </property>
+      <property name="text">
+       <string>Handheld</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="go_to_next_iteration_button">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>540</y>
+        <width>181</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+    border-radius: 3px;
+    border: 1px solid #333333;
+    color: white;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
+    border-style: inset;
+}
+QPushButton:hover {
+    background-color: #595959;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>GO TO NEXT ITERATION</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="slow_automaric_button">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>540</y>
+        <width>181</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+    border-radius: 3px;
+    border: 1px solid #333333;
+    color: white;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
+    border-style: inset;
+}
+QPushButton:hover {
+    background-color: #595959;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SLOW AUTOMATIC</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spin_cave_sleep">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>540</y>
+        <width>101</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox {
+font-family: Menlo;
+font-size: 25pt;
+color:white;
+font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255)
+}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="maximum">
+       <number>10000</number>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="Maze">
      <attribute name="title">
@@ -665,18 +833,18 @@ font-weight: bold;
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {
-background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f); 
-color: white;
-border: 1px solid #333333;
-border-radius: 3px;
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+    border-radius: 3px;
+    border: 1px solid #333333;
+    color: white;
 }
-
 QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
     border-style: inset;
 }
-</string>
+QPushButton:hover {
+    background-color: #595959;
+}</string>
       </property>
       <property name="text">
        <string>Load File</string>
@@ -698,16 +866,18 @@ QPushButton:pressed {
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
     border-radius: 3px;
     border: 1px solid #333333;
     color: white;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
     border-style: inset;
 }
-</string>
+QPushButton:hover {
+    background-color: #595959;
+}</string>
       </property>
       <property name="text">
        <string>Save File</string>
@@ -762,16 +932,18 @@ SETTING</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
     border-radius: 3px;
     border: 1px solid #333333;
     color: white;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
     border-style: inset;
 }
-</string>
+QPushButton:hover {
+    background-color: #595959;
+}</string>
       </property>
       <property name="text">
        <string>GENERATE</string>
@@ -903,16 +1075,18 @@ font-weight: bold;
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #696969, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
+       <string notr="true">QPushButton {background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #797979, stop:0.48 #595959, stop:0.52 #5e5e5e, stop:1 #4f4f4f);
     border-radius: 3px;
     border: 1px solid #333333;
     color: white;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #494949, stop:0.52 #434343, stop:1 #363636);
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #595959, stop:0.48 #393939, stop:0.52 #434343, stop:1 #363636);
     border-style: inset;
 }
-</string>
+QPushButton:hover {
+    background-color: #595959;
+}</string>
       </property>
       <property name="text">
        <string>Solving Maze</string>

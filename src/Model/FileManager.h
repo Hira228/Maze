@@ -64,20 +64,15 @@ class FileManager<Maze> {
 template<>
 class FileManager<Cave> {
 public:
-    static Cave Read(const std::string path) {
+    static Cave Read(const std::string path, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u) {
         std::ifstream file(path);
         if (!file.is_open()) return {};
         std::size_t rows,cols;
         file >> rows >> cols;
-        Cave cave_(rows, cols);
+        Cave cave_(rows, cols, l_d, l_u, b_d, b_u);
         for (size_t i =  1; i < cave_.cave_.size() - 1; ++i) {
             for (size_t j = 1; j < cave_.cave_[i].size() - 1; ++j) file >> cave_.cave_[i][j];
         }
-        // for (auto& vec : cave_.cave_) { 
-        // for (auto & elem : vec) { 
-        //         file >> elem;
-        //     }
-        // }
         file.close();
         return cave_;
     }

@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ include CMakeFiles/Maze_autogen.dir/progress.make
 
 CMakeFiles/Maze_autogen:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gradyzan/A1_Maze-1/src/build-View-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Maze"
-	/usr/local/bin/cmake -E cmake_autogen /Users/gradyzan/A1_Maze-1/src/build-View-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/Maze_autogen.dir/AutogenInfo.json Debug
+	/Applications/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/gradyzan/A1_Maze-1/src/build-View-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/Maze_autogen.dir/AutogenInfo.json Debug
 
 Maze_autogen: CMakeFiles/Maze_autogen
 Maze_autogen: CMakeFiles/Maze_autogen.dir/build.make

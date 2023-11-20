@@ -66,24 +66,23 @@ std::pair<std::pair<matrix,matrix>,std::vector<std::pair<size_t,size_t>>> Model:
  }
 
 pair Model::get_param_cave() const {
-    return std::make_pair(cave->GetWeight(), cave->GetHeight());
-}
+    return std::make_pair(cave->GetWeight() + 2, cave->GetHeight() + 2);
+} 
 
-bool Model::GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, std::pair<value_type, value_type> live, std::pair<value_type, value_type> born) { 
-   try { 
-    cave->SetParameters(rows,cols,life_chance, live, born);
-    cave->GenerateCave();
-    return true;
+bool Model::GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u) { 
+   try {
+    cave->SetParameters(rows, cols, life_chance, l_d, l_u,  b_d, b_u);
+    cave->InitializeRandomCave();
+    return cave->GenerateCave();
    } catch (...) { 
     return false;
    }
 }
 
-bool Model::ReadFromFileCave(const std::string& path) { 
+bool Model::ReadFromFileCave(const std::string& path, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u) { 
     try { 
-        cave.reset(std::make_unique<typename s21::Cave>(FileManager<Cave>::Read(path)).release());
-        cave->GenerateCave();
-        return cave->GoodCave();
+        cave.reset(std::make_unique<typename s21::Cave>(FileManager<Cave>::Read(path, l_d, l_u, b_d, b_u)).release());
+return  cave->GenerateCave();
     } catch (...) { 
         return false;
     }

@@ -20,10 +20,21 @@ int main() {
   //  std::cout << maze;
   // s21::Model model;
   // s21::Controller controller(std::make_unique<typename s21::Model>());
-  // std::cout << controller.ReadFromFileCave("./Controller/dfdf.txt");
-  s21::Cave cave = s21::FileManager<s21::Cave>::Read("./Controller/dfdf.txt");
-  cave.print();
-  
+  // // std::cout << controller.ReadFromFileCave("./Controller/dfdf.txt");
+  // // s21::Cave cave = s21::FileManager<s21::Cave>::Read("./Controller/dfdf.txt");
+  // // cave.GenerateCave();
+  // // cave.print();
+  // controller.GenerateCave(50, 50, 50, 4,8,5,8);
+
+  // controller.GenerateCave(20,20, 50,  4,8,5,8);
+
+  //c.GenerateCave(50, 50, 50, 4,8,5,8)
+
+
+    std::vector<std::vector<int>>temp(50,std::vector<int>(50, 1)); 
+  s21::Controller controller(std::make_unique<typename s21::Model>());
+  controller.ReadFromFileCave("./MazeExample/cave_test3.txt", 5, 8, 2, 8);
+      std::vector<std::vector<int>>temp(50,std::vector<int>(50, 1)); 
 
   // s21::Controller controller(std::make_unique(model));
 

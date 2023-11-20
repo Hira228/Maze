@@ -21,8 +21,9 @@ class Controller {
   pair get_paramets() const noexcept;
   pair get_paramters_cave() const noexcept;
   cave_type get_data_cave() const noexcept;
-  bool GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, std::pair<value_type, value_type> live, std::pair<value_type, value_type> born) {model->GenerateCave(rows,cols,life_chance,live,born); }
-  bool ReadFromFileCave(const std::string& path);
+  bool GenerateCave(const value_type& rows,const value_type& cols, const value_type& life_chance, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u) {return model->GenerateCave(rows,cols,life_chance,l_d,l_u, b_d, b_u); }
+  bool ReadFromFileCave(const std::string& path, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u);
+  std::vector<cave_type> GetIterators() { return model->GetIterators(); }
 
  private:
   std::unique_ptr<Model> model;

@@ -6,17 +6,7 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/private/var/folders/zz/zyxvpxvq6csfxvn_n0002qgc000nvv/T/AppTranslocation/0AF1A8DE-6618-45E0-9344-1B0B4CE2B736/d/Qt Creator.app/Contents/Resources/package-manager/auto-setup.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeSystem.cmake.in"
+			"path" : "/private/var/folders/zz/zyxvpxvq6csfxvn_n0002qgc000nvv/T/AppTranslocation/C92EB63F-56DF-448C-AABD-ECE13F803ECB/d/Qt Creator.app/Contents/Resources/package-manager/auto-setup.cmake"
 		},
 		{
 			"isGenerated" : true,
@@ -25,247 +15,12 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeUnixFindMake.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeDetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeDetermineCompilerId.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCompilerIdDetection.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake"
 		},
 		{
 			"isGenerated" : true,
@@ -274,141 +29,82 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeGenericSystem.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/Darwin.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/UnixPaths.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCXXInformation.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeLanguageInformation.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/Clang.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/GNU.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Platform/Apple-Clang.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeTestCompilerCommon.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeDetermineCompilerABI.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeTestCompilerCommon.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Internal/FeatureTesting.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in"
-		},
-		{
-			"isGenerated" : true,
-			"path" : "/Users/gradyzan/A1_Maze-1/src/build-View-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -449,37 +145,37 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Internal/CheckCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckCompilerFlag.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckFlagCommonConfig.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -508,7 +204,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -517,37 +213,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindThreads.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckLibraryExists.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFile.cxx.in"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -588,7 +279,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -617,7 +308,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -626,32 +317,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindThreads.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckLibraryExists.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -668,7 +359,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -713,7 +404,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -742,7 +433,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -751,32 +442,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindThreads.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckLibraryExists.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -793,7 +484,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -814,7 +505,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -851,7 +542,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -904,7 +595,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -949,7 +640,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -978,7 +669,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -987,32 +678,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindThreads.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckLibraryExists.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1021,17 +712,17 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1048,7 +739,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1089,7 +780,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeParseArguments.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1110,7 +801,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1155,7 +846,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1184,7 +875,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1193,32 +884,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindThreads.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckLibraryExists.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1227,27 +918,27 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindOpenGL.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindOpenGL.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1264,7 +955,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1297,7 +988,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1342,7 +1033,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1371,7 +1062,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1380,32 +1071,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindThreads.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckLibraryExists.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1422,7 +1113,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1467,12 +1158,12 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/MacroAddFileDependencies.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/MacroAddFileDependencies.cmake"
 		},
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeParseArguments.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1513,7 +1204,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/CMakeParseArguments.cmake"
+			"path" : "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake"
 		},
 		{
 			"isExternal" : true,

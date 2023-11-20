@@ -29,7 +29,7 @@ namespace s21 {
     cave_type Controller::get_data_cave() const noexcept {
         return model->get_data_cave();
     }
-    bool Controller::ReadFromFileCave(const std::string& path) {
-        return model->ReadFromFileCave(path);
+    bool Controller::ReadFromFileCave(const std::string& path, const std::size_t& l_d, const std::size_t& l_u, const std::size_t& b_d, const std::size_t& b_u) {
+        return model->ReadFromFileCave(path,l_d, l_u,  b_d,  b_u);
     }
 }
